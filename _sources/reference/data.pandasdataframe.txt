@@ -1,0 +1,7 @@
+
+Pandas dataframe class
+==============================
+
+.. automodule:: cheddar.data.pandasdataframe
+   :members:
+   :show-inheritance:

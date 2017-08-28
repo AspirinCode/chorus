@@ -1,0 +1,7 @@
+
+chemex.model.graphmol
+==============================
+
+.. automodule:: chemex.model.graphmol
+   :members:
+   :show-inheritance:

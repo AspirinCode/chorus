@@ -1,0 +1,7 @@
+
+Draw Qt
+==============================
+
+.. automodule:: chorus.draw.qt
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+
+Export to excel
+==============================
+
+.. automodule:: cheddar.data.excelexporter
+   :members:

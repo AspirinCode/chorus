@@ -1,0 +1,6 @@
+
+Text utility
+==============================
+
+.. automodule:: cheddar.util.text
+   :members:

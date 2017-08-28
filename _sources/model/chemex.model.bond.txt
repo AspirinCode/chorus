@@ -1,0 +1,7 @@
+
+chemex.model.bond
+==============================
+
+.. automodule:: chemex.model.bond
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+
+Atom model base class
+==============================
+
+.. automodule:: cheddar.chem.model.abstractatom
+   :members:

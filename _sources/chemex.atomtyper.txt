@@ -1,0 +1,6 @@
+
+Atomtyper
+==============================
+
+.. automodule:: chemex.atomtyper
+   :members:

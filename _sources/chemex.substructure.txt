@@ -1,0 +1,6 @@
+
+Substructure search
+==============================
+
+.. automodule:: chemex.substructure
+   :members:

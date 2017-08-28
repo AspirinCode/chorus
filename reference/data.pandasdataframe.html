@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pandas dataframe class &mdash; cheddar 0.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="cheddar 0.7 documentation" href="../index.html"/>
+        <link rel="up" title="Reference" href="index.html"/>
+        <link rel="next" title="Export to excel" href="data.excelexporter.html"/>
+        <link rel="prev" title="Dataframe base class" href="data.abstractdataframe.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> cheddar
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.drawermixin2d.html">Custom drawer - drawermixin2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.helper.html">Molecule drawing helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.qt.html">Draw Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.svg.html">Draw SVG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractatom.html">Atom model base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractbond.html">Bond model base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractmolecule.html">Molecule base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.atom.html">Atom model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.bond.html">Bond model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.graphmol.html">Graphmol model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.atomtyper.html">Atomtyper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.substructure.html">Substructure search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.mcsfinder.html">MCS finder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.smilessupplier.html">Smiles import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.v2000supplier.html">CTAB(.mol, .sdf) import - v2000supplier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.abstractdataframe.html">Dataframe base class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data.abstractdataframe.html#id1">Dataframe base class</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Pandas dataframe class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.excelexporter.html">Export to excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data.excelexporter.html#id1">Export to excel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data.sqliteconnection.html">SQLite connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.geometry.html">Geometry utilty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.graph.html">Graph utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.itertools.html">Itertools utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.multiprocess.html">Multiprocessing utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.text.html">Text utility</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">cheddar</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Reference</a> &raquo;</li>
+      
+    <li>Pandas dataframe class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/data.pandasdataframe.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-cheddar.data.pandasdataframe">
+<span id="pandas-dataframe-class"></span><h1>Pandas dataframe class<a class="headerlink" href="#module-cheddar.data.pandasdataframe" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cheddar.data.pandasdataframe.Dataframe">
+<em class="property">class </em><tt class="descname">Dataframe</tt><big>(</big><em>data=None</em>, <em>names=()</em><big>)</big><a class="headerlink" href="#cheddar.data.pandasdataframe.Dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="data.abstractdataframe.html#cheddar.data.abstractdataframe.AbstractDataframe" title="cheddar.data.abstractdataframe.AbstractDataframe"><tt class="xref py py-class docutils literal"><span class="pre">cheddar.data.abstractdataframe.AbstractDataframe</span></tt></a></p>
+<p>Table structure dataframe</p>
+<ul>
+<li><p class="first">dataframe construction</p>
+<blockquote>
+<div><p>The dataframe supports following input format which are also acceptable
+in Pandas.</p>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>　list of list</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Dataframe</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s">&quot;sushi&quot;</span><span class="p">,</span> <span class="mi">1300</span><span class="p">,</span> <span class="s">&quot;fish&quot;</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s">&quot;sukiyaki&quot;</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="s">&quot;meat&quot;</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="s">&quot;ramen&quot;</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="s">&quot;noodle&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>dict of list</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Dataframe</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span>
+<span class="gp">... </span>    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;sushi&quot;</span><span class="p">,</span> <span class="s">&quot;sukiyaki&quot;</span><span class="p">,</span> <span class="s">&quot;ramen&quot;</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1300</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">700</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="s">&quot;ingredient&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s">&quot;fish&quot;</span><span class="p">,</span> <span class="s">&quot;beef&quot;</span><span class="p">,</span> <span class="s">&quot;noodle&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">},</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>list of dict</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Dataframe</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;sushi&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="mi">1300</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">:</span> <span class="s">&quot;fish&quot;</span><span class="p">},</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;sukiyaki&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">:</span> <span class="s">&quot;meat&quot;</span><span class="p">},</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;ramen&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">:</span> <span class="s">&quot;noodle&quot;</span><span class="p">}</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">,</span> <span class="s">&quot;ingredient&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Augment &#8216;columns&#8217; is not required for dict of list and list of dict
+but is recommended to set due to specify the order of columns
+to be displayed.</p>
+</div></blockquote>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.data.pandasdataframe.type_hint">
+<tt class="descname">type_hint</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#cheddar.data.pandasdataframe.type_hint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Infer datatype</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>iterable</em>) &#8211; data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Suitable datatype
+Mixed array will be upcasted (int =&gt; float =&gt; text =&gt; object)
+Sequence of None will results None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data.excelexporter.html" class="btn btn-neutral float-right" title="Export to excel" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.abstractdataframe.html" class="btn btn-neutral" title="Dataframe base class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Seiji Matsuoka.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

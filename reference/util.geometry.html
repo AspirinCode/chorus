@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Geometry utilty &mdash; cheddar 0.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="cheddar 0.7 documentation" href="../index.html"/>
+        <link rel="up" title="Reference" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> cheddar
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.drawermixin2d.html">Custom drawer - drawermixin2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.helper.html">Molecule drawing helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.qt.html">Draw Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.draw.svg.html">Draw SVG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractatom.html">Atom model base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractbond.html">Bond model base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.abstractmolecule.html">Molecule base class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.atom.html">Atom model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.bond.html">Bond model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.model.graphmol.html">Graphmol model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.atomtyper.html">Atomtyper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.substructure.html">Substructure search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.mcsfinder.html">MCS finder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.smilessupplier.html">Smiles import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chem.v2000supplier.html">CTAB(.mol, .sdf) import - v2000supplier</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Geometry utilty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.itertools.html">Itertools utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.text.html">Text utility</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">cheddar</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Reference</a> &raquo;</li>
+      
+    <li>Geometry utilty</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/util.geometry.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-cheddar.util.geometry">
+<span id="geometry-utilty"></span><h1>Geometry utilty<a class="headerlink" href="#module-cheddar.util.geometry" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="cheddar.util.geometry.vector">
+<tt class="descname">vector</tt><big>(</big><em>p1</em>, <em>p2</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>p1 to p2 vector
+:param p1, p2: point (x, y)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.distance">
+<tt class="descname">distance</tt><big>(</big><em>p1</em>, <em>p2</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>distance between p1 and p2</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.translate">
+<tt class="descname">translate</tt><big>(</big><em>v</em>, <em>op</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>translate vector
+:param v: vector (x, y)
+:param op: operator (x, y)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.scale">
+<tt class="descname">scale</tt><big>(</big><em>p</em>, <em>factor</em>, <em>o=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>scale vector
+:param p: point (x, y)
+:param factor: scaling factor
+:param o: origin (x, y)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.unit">
+<tt class="descname">unit</tt><big>(</big><em>v</em>, <em>lg=1</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>unit vector
+:param p: point (x, y)
+:param lg: length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt> &#8211; Null vector was given</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.rotate">
+<tt class="descname">rotate</tt><big>(</big><em>p</em>, <em>rad</em>, <em>o=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>rotate vector
+:param p: point (x, y)
+:param rad: angle(radian)
+:param o: origin (x, y)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.cross_product">
+<tt class="descname">cross_product</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>o=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.cross_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cross product
+:param p1, p2: point (x, y)
+:param o: origin</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.dot_product">
+<tt class="descname">dot_product</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>o=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.dot_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dot product
+:param p1, p2: point (x, y)
+:param o: origin</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.interior_angle">
+<tt class="descname">interior_angle</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>o=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.interior_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns interior angle of two vector(0 &lt;= θ &lt;= pi)
+:param p1, p2: point (x, y)
+:param o: origin</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt> &#8211; p1 or p2 is overlapped with origin</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.m_seg">
+<tt class="descname">m_seg</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>rad</em>, <em>dist</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.m_seg" title="Permalink to this definition">¶</a></dt>
+<dd><p>move segment by distance
+:param p1, p2: point(x, y)
+:param rad: relative direction angle(radian)
+:param dist: distance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">translated segment(p1, p2)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.t_seg">
+<tt class="descname">t_seg</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>t</em>, <em>align=0</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.t_seg" title="Permalink to this definition">¶</a></dt>
+<dd><p>trim segment
+:param p1, p2: point(x, y)
+:param t: scaling factor (1 - trimed segment / original segment)
+:param align: 1: trim p2, 2: trim p1, 0: both side</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">trimmed segment(p1, p2)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.p_seg">
+<tt class="descname">p_seg</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>cw</em>, <em>interval</em>, <em>trim=0</em>, <em>align=0</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.p_seg" title="Permalink to this definition">¶</a></dt>
+<dd><p>parallel segment
+:param p1, p2: point(x, y)
+:param cw: m_seg rad True: -π/2, False: π/2
+:param interval: m_seg dist
+:param trim: t_seg trim
+:param align: t_seg align</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cheddar.util.geometry.is_clockwise">
+<tt class="descname">is_clockwise</tt><big>(</big><em>vertices</em><big>)</big><a class="headerlink" href="#cheddar.util.geometry.is_clockwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate whether vertices are in clockwise order.
+:param vertices: list of vertices (x, y) in polygon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">clockwise, False: counter-clockwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">True</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt> &#8211; the polygon is complex or overlapped.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Seiji Matsuoka.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

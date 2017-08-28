@@ -1,0 +1,6 @@
+
+Geometry utilty
+==============================
+
+.. automodule:: chemex.util.geometry
+   :members:

@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Draw SVG &mdash; chemex 0.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="chemex 0.7 documentation" href="../index.html"/>
+        <link rel="up" title="Draw" href="index.html"/>
+        <link rel="next" title="Draw Qt" href="chemex.draw.qt.html"/>
+        <link rel="prev" title="Draw" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> chemex
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model/index.html">Model</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Draw</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Draw SVG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chemex.draw.qt.html">Draw Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chemex.draw.drawermixin2d.html">Custom drawer - drawermixin2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chemex.draw.helper.html">Molecule drawing helper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utility/index.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemex.smilessupplier.html">Smiles import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemex.v2000supplier.html">CTAB(.mol, .sdf) import - v2000supplier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemex.atomtyper.html">Atomtyper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemex.substructure.html">Substructure search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemex.drmcs.html">MCS finder</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">chemex</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Draw</a> &raquo;</li>
+      
+    <li>Draw SVG</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/draw/chemex.draw.svg.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-chemex.draw.svg">
+<span id="draw-svg"></span><h1>Draw SVG<a class="headerlink" href="#module-chemex.draw.svg" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="chemex.draw.svg.SVG">
+<em class="property">class </em><tt class="descname">SVG</tt><big>(</big><em>compound</em>, <em>screen_size=(180</em>, <em>180)</em><big>)</big><a class="headerlink" href="#chemex.draw.svg.SVG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="chemex.draw.drawermixin2d.html#chemex.draw.drawermixin2d.DrawerMixin2D" title="chemex.draw.drawermixin2d.DrawerMixin2D"><tt class="xref py py-class docutils literal"><span class="pre">chemex.draw.drawermixin2d.DrawerMixin2D</span></tt></a></p>
+<p>Draw chemical structure in SVG format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>compound</strong> &#8211; compound</li>
+<li><strong>screen_size</strong> (<em>width, height</em>) &#8211; pixel size to display</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="chemex.draw.svg.SVG.font_weight">
+<tt class="descname">font_weight</tt><a class="headerlink" href="#chemex.draw.svg.SVG.font_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; font weight</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chemex.draw.svg.SVG.font_family">
+<tt class="descname">font_family</tt><a class="headerlink" href="#chemex.draw.svg.SVG.font_family" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; font family</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chemex.draw.svg.SVG.screen_size">
+<tt class="descname">screen_size</tt><a class="headerlink" href="#chemex.draw.svg.SVG.screen_size" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>width, height</em> &#8211; pixel size to display</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chemex.draw.svg.SVG.logical_size">
+<tt class="descname">logical_size</tt><a class="headerlink" href="#chemex.draw.svg.SVG.logical_size" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>width, height</em> &#8211; pixel size of actual viewport</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chemex.draw.svg.SVG.contents">
+<tt class="descname">contents</tt><big>(</big><big>)</big><a class="headerlink" href="#chemex.draw.svg.SVG.contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get svg string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chemex.draw.svg.SVG.data_url_scheme">
+<tt class="descname">data_url_scheme</tt><big>(</big><big>)</big><a class="headerlink" href="#chemex.draw.svg.SVG.data_url_scheme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get svg in Data URL Scheme format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chemex.draw.svg.SVG.save">
+<tt class="descname">save</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#chemex.draw.svg.SVG.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save svg as file(.svg)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) &#8211; destination to save file</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chemex.draw.qt.html" class="btn btn-neutral float-right" title="Draw Qt" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Draw" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Seiji Matsuoka.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+Molecule base class
+==============================
+
+.. automodule:: cheddar.chem.model.abstractmolecule
+   :members:

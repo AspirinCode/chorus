@@ -1,0 +1,7 @@
+
+CTAB(.mol, .sdf) import - v2000supplier
+========================================
+
+
+.. automodule:: chemex.v2000supplier
+   :members:

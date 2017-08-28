@@ -1,0 +1,7 @@
+
+chemex.model.atom
+==============================
+
+.. automodule:: chemex.model.atom
+   :members:
+   :show-inheritance:

@@ -1,0 +1,6 @@
+
+Bond model base class
+==============================
+
+.. automodule:: cheddar.chem.model.abstractbond
+   :members:

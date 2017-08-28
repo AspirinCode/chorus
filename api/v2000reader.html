@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>chorus.v2000reader &mdash; chorus 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="chorus 0.9.0 documentation" href="../index.html"/>
+        <link rel="up" title="API references" href="api.html"/>
+        <link rel="next" title="chorus.v2000writer" href="v2000writer.html"/>
+        <link rel="prev" title="chorus.smilessupplier" href="smilessupplier.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> chorus
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API references</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="model.atom.html">chorus.model.atom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.bond.html">chorus.model.bond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.graphmol.html">chorus.model.graphmol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.drawable.html">chorus.draw.drawable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.drawer2d.html">chorus.draw.drawer2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.svg.html">chorus.draw.svg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.matplotlib.html">chorus.draw.matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.helper.html">chorus.draw.helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.calc2dcoords.html">chorus.draw.calc2dcoords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.geometry.html">chorus.util.geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.iterator.html">chorus.util.iterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.text.html">chorus.util.text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.debug.html">chorus.util.debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smilessupplier.html">chorus.smilessupplier</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">chorus.v2000reader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2000writer.html">chorus.v2000writer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="molutil.html">chorus.molutil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topology.html">chorus.topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remover.html">chorus.remover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor.html">chorus.descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wclogp.html">chorus.wclogp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="substructure.html">chorus.substructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcsdr.html">chorus.mcsdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo.html">chorus.indigo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rdkit.html">chorus.rdkit</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">chorus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api.html">API references</a> &raquo;</li>
+        
+      <li>chorus.v2000reader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/v2000reader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-chorus.v2000reader">
+<span id="chorus-v2000reader"></span><h1>chorus.v2000reader<a class="headerlink" href="#module-chorus.v2000reader" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="chorus.v2000reader.inspect_file">
+<code class="descname">inspect_file</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.inspect_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inspect SDFile structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(data label list, number of records)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.optional_data">
+<code class="descname">optional_data</code><span class="sig-paren">(</span><em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.optional_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse SDFile data part into dict</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.atoms">
+<code class="descname">atoms</code><span class="sig-paren">(</span><em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse atom block into atom objects</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">networkx nodes</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.bonds">
+<code class="descname">bonds</code><span class="sig-paren">(</span><em>lines</em>, <em>atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.bonds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse bond block into bond objects</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">networkx adjacency dict</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.properties">
+<code class="descname">properties</code><span class="sig-paren">(</span><em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse properties block</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">{property_type: (atom_index, value)}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.add_properties">
+<code class="descname">add_properties</code><span class="sig-paren">(</span><em>props</em>, <em>mol</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.add_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>apply properties to the molecule object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None (alter molecule object directly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.molecule">
+<code class="descname">molecule</code><span class="sig-paren">(</span><em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.molecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse molfile part into molecule object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lines</strong> (<em>list</em>) – lines of molfile part</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code> – Symbol not defined in periodictable.yaml
+(Polymer expression not supported yet)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.mol_supplier">
+<code class="descname">mol_supplier</code><span class="sig-paren">(</span><em>lines</em>, <em>no_halt</em>, <em>assign_descriptors</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.mol_supplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields molecules generated from CTAB text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lines</strong> (<em>iterable</em>) – CTAB text lines</li>
+<li><strong>no_halt</strong> (<em>boolean</em>) – True: shows warning messages for invalid format and go on.
+False: throws an exception for it and stop parsing.</li>
+<li><strong>assign_descriptors</strong> (<em>boolean</em>) – if True, default descriptors are automatically assigned.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.mols_from_text">
+<code class="descname">mols_from_text</code><span class="sig-paren">(</span><em>text</em>, <em>no_halt=True</em>, <em>assign_descriptors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.mols_from_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns molecules generated from sdfile text</p>
+<dl class="docutils">
+<dt>Throws:</dt>
+<dd>StopIteration: if the text does not have molecule
+ValueError: if Unsupported symbol is found</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.mol_from_text">
+<code class="descname">mol_from_text</code><span class="sig-paren">(</span><em>text</em>, <em>assign_descriptors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.mol_from_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse CTAB text and return first one as a Compound object.</p>
+<dl class="docutils">
+<dt>Throws:</dt>
+<dd>StopIteration: if the text does not have molecule
+ValueError: if Unsupported symbol is found</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.mols_from_file">
+<code class="descname">mols_from_file</code><span class="sig-paren">(</span><em>path</em>, <em>no_halt=True</em>, <em>assign_descriptors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.mols_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compound supplier from CTAB text file (.mol, .sdf)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="chorus.v2000reader.mol_from_file">
+<code class="descname">mol_from_file</code><span class="sig-paren">(</span><em>path</em>, <em>assign_descriptors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.mol_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse CTAB file and return first one as a Compound object.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="v2000writer.html" class="btn btn-neutral float-right" title="chorus.v2000writer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="smilessupplier.html" class="btn btn-neutral" title="chorus.smilessupplier" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Seiji Matsuoka.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.9.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

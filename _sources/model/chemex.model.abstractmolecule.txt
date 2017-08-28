@@ -1,0 +1,6 @@
+
+chemex.model.abstractmolecule
+==============================
+
+.. automodule:: chemex.model.abstractmolecule
+   :members:

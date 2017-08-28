@@ -1,0 +1,12 @@
+.. _reference:
+
+Utility
+***********
+
+.. toctree::
+   :maxdepth: 2
+
+   chemex.util.geometry
+   chemex.util.itertools
+   chemex.util.profile
+   chemex.util.text

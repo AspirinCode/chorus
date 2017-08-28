@@ -1,0 +1,6 @@
+
+Itertools utility
+==============================
+
+.. automodule:: cheddar.util.itertools
+   :members:
