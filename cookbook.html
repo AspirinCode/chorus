@@ -93,7 +93,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Cookbook</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cookbook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#chemical-structure-drawing">Chemical structure drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chemical-properties-and-descriptors">Chemical properties and descriptors</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api/api.html">API references</a></li>
 </ul>
 
@@ -160,23 +164,60 @@
             
   <div class="section" id="cookbook">
 <h1>Cookbook<a class="headerlink" href="#cookbook" title="Permalink to this headline">¶</a></h1>
-<p><strong>Installation</strong></p>
-<p><em>Mac</em></p>
-<p>If you don’t have Python3,</p>
-<p>ruby -e “$(curl -fsSL <a class="reference external" href="https://raw.githubusercontent.com/Homebrew/install/master/install">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”
-brew install python3</p>
-<p>and then</p>
-<p>pip3 install chorus</p>
-<p><strong>Import Chemical structure</strong></p>
-<p><em>SMILES</em></p>
-<p><em>CTAB file (.sdf, .mol)</em></p>
-<p><strong>Draw molecule to SVG</strong></p>
-<p><strong>Calculate molecule properties</strong></p>
+<div class="section" id="chemical-structure-drawing">
+<h2>Chemical structure drawing<a class="headerlink" href="#chemical-structure-drawing" title="Permalink to this headline">¶</a></h2>
+<p>SVG</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus.demo</span> <span class="k">import</span> <span class="n">MOL</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus</span> <span class="k">import</span> <span class="n">v2000reader</span> <span class="k">as</span> <span class="n">reader</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus.draw.svg</span> <span class="k">import</span> <span class="n">SVG</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mol</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">mol_from_text</span><span class="p">(</span><span class="n">MOL</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">svg</span> <span class="o">=</span> <span class="n">SVG</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">svg</span><span class="o">.</span><span class="n">contents</span><span class="p">()</span>
+<span class="go">&#39;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">svg</span><span class="o">.</span><span class="n">data_url_scheme</span><span class="p">()</span>
+<span class="go">&#39;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPS ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">svg</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;demo.svg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/demo.svg"><img alt="_images/demo.svg" src="_images/demo.svg" width="300px" /></a>
+<p>PNG (using matplotlib)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus.demo</span> <span class="k">import</span> <span class="n">MOL</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus</span> <span class="k">import</span> <span class="n">v2000reader</span> <span class="k">as</span> <span class="n">reader</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus.draw.matplotlib</span> <span class="k">import</span> <span class="n">Matplotlib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mol</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">mol_from_text</span><span class="p">(</span><span class="n">MOL</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mpl</span> <span class="o">=</span> <span class="n">Matplotlib</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mpl</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;demo.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/demo.png"><img alt="_images/demo.png" src="_images/demo.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="chemical-properties-and-descriptors">
+<h2>Chemical properties and descriptors<a class="headerlink" href="#chemical-properties-and-descriptors" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus.demo</span> <span class="k">import</span> <span class="n">MOL</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus</span> <span class="k">import</span> <span class="n">molutil</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus</span> <span class="k">import</span> <span class="n">v2000reader</span> <span class="k">as</span> <span class="n">reader</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mol</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">mol_from_text</span><span class="p">(</span><span class="n">MOL</span><span class="p">[</span><span class="s2">&quot;Paclitaxel&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molutil</span><span class="o">.</span><span class="n">mw</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">853.92</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molutil</span><span class="o">.</span><span class="n">formula</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">&#39;C47H50NO14&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molutil</span><span class="o">.</span><span class="n">H_donor_count</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molutil</span><span class="o">.</span><span class="n">H_acceptor_count</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molutil</span><span class="o">.</span><span class="n">rotatable_count</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">chorus</span> <span class="k">import</span> <span class="n">wclogp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wclogp</span><span class="o">.</span><span class="n">wclogp</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="go">3.53</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
 <li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
 <li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
 </ul>
+</div>
 </div>
 
 
