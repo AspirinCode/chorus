@@ -1,6 +1,0 @@
-
-descriptor
-==============================
-
-.. automodule:: chorus.descriptor
-   :members:

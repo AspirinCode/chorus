@@ -1,6 +1,0 @@
-
-Geometry utilty
-==============================
-
-.. automodule:: cheddar.util.geometry
-   :members:

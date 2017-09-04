@@ -1,6 +1,0 @@
-
-Profile
-==============================
-
-.. automodule:: chorus.util.profile
-   :members:

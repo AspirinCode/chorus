@@ -1,6 +1,0 @@
-
-Itertools utility
-==============================
-
-.. automodule:: chemex.util.itertools
-   :members:

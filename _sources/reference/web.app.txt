@@ -1,6 +1,0 @@
-
-Web application
-==============================
-
-.. automodule:: cheddar.web.app
-   :members:

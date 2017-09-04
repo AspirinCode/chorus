@@ -1,6 +1,0 @@
-
-Profile utility
-==============================
-
-.. automodule:: chemex.util.profile
-   :members:

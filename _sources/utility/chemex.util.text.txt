@@ -1,6 +1,0 @@
-
-Text utility
-==============================
-
-.. automodule:: chemex.util.text
-   :members:

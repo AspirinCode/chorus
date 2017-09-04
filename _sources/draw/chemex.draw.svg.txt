@@ -1,7 +1,0 @@
-
-Draw SVG
-==============================
-
-.. automodule:: chemex.draw.svg
-   :members:
-   :show-inheritance:

@@ -1,6 +1,0 @@
-
-Itertools
-==============================
-
-.. automodule:: chorus.util.itertools
-   :members:

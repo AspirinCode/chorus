@@ -1,6 +1,0 @@
-
-Smiles import
-==============================
-
-.. automodule:: cheddar.chem.smilessupplier
-   :members:

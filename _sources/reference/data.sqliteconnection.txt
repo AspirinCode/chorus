@@ -1,6 +1,0 @@
-
-SQLite connection
-==============================
-
-.. automodule:: cheddar.data.sqliteconnection
-   :members:

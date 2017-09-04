@@ -1,6 +1,0 @@
-
-Multiprocessing utility
-==============================
-
-.. automodule:: cheddar.util.multiprocess
-   :members:

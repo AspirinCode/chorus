@@ -1,6 +1,0 @@
-
-chemex.model.abstractatom
-==============================
-
-.. automodule:: chemex.model.abstractatom
-   :members:

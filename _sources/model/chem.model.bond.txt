@@ -1,7 +1,0 @@
-
-Bond model
-==============================
-
-.. automodule:: cheddar.chem.model.bond
-   :members:
-   :show-inheritance:

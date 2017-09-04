@@ -1,7 +1,0 @@
-
-Draw SVG
-==============================
-
-.. automodule:: cheddar.chem.draw.svg
-   :members:
-   :show-inheritance:

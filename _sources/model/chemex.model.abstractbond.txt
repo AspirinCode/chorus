@@ -1,6 +1,0 @@
-
-chemex.model.abstractbond
-==============================
-
-.. automodule:: chemex.model.abstractbond
-   :members:

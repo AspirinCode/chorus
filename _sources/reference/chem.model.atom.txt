@@ -1,7 +1,0 @@
-
-Atom model
-==============================
-
-.. automodule:: cheddar.chem.model.atom
-   :members:
-   :show-inheritance:

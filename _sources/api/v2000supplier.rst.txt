@@ -1,7 +1,0 @@
-
-chorus.v2000supplier
-========================================
-
-
-.. automodule:: chorus.v2000supplier
-   :members:

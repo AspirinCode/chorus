@@ -1,6 +1,0 @@
-
-Smiles import
-==============================
-
-.. automodule:: chemex.smilessupplier
-   :members:

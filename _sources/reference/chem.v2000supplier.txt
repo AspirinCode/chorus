@@ -1,7 +1,0 @@
-
-CTAB(.mol, .sdf) import - v2000supplier
-========================================
-
-
-.. automodule:: cheddar.chem.v2000supplier
-   :members:

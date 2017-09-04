@@ -1,7 +1,0 @@
-
-Dataframe base class
-==============================
-
-.. automodule:: cheddar.data.abstractdataframe
-   :members:
-   :private-members:

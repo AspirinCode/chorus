@@ -1,6 +1,0 @@
-
-Substructure search
-==============================
-
-.. automodule:: cheddar.chem.substructure
-   :members:

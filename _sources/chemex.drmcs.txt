@@ -1,6 +1,0 @@
-
-MCS finder
-==============================
-
-.. automodule:: chemex.drmcs
-   :members:

@@ -1,7 +1,0 @@
-
-Draw Qt
-==============================
-
-.. automodule:: cheddar.chem.draw.qt
-   :members:
-   :show-inheritance:

@@ -1,6 +1,0 @@
-
-MCS finder
-==============================
-
-.. automodule:: cheddar.chem.mcsfinder
-   :members:

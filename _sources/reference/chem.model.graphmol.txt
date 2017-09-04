@@ -1,7 +1,0 @@
-
-Graphmol model 
-==============================
-
-.. automodule:: cheddar.chem.model.graphmol
-   :members:
-   :show-inheritance:
