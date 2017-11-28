@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>chorus.model.bond &mdash; chorus 0.7.1 documentation</title>
+  <title>chorus.model.bond &mdash; chorus 0.7.2 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="chorus 0.7.1 documentation" href="../index.html"/>
+    <link rel="top" title="chorus 0.7.2 documentation" href="../index.html"/>
         <link rel="up" title="API references" href="api.html"/>
         <link rel="next" title="chorus.model.graphmol" href="model.graphmol.html"/>
         <link rel="prev" title="chorus.model.atom" href="model.atom.html"/> 
@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="substructure.html">chorus.substructure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcsdr.html">chorus.mcsdr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rdkit.html">chorus.rdkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo.html">chorus.indigo</a></li>
 </ul>
 </li>
 </ul>
@@ -189,6 +190,95 @@
             
   <div class="section" id="module-chorus.model.bond">
 <span id="chorus-model-bond"></span><h1>chorus.model.bond<a class="headerlink" href="#module-chorus.model.bond" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="chorus.model.bond.Bond">
+<em class="property">class </em><code class="descname">Bond</code><span class="sig-paren">(</span><em>attr_dict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.bond.Bond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bond object</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Bond type</dt>
+<dd><ul class="first simple">
+<li><dl class="first docutils">
+<dt>Single bond</dt>
+<dd><ul class="first last">
+<li>0: first - second</li>
+<li>1: first ◀ second (Up-arrow)</li>
+<li>2: first ◁ second (Down-arrow)</li>
+<li>3: first ~ second (Chiral)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="last docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>Double bond</dt>
+<dd><ul class="first last simple">
+<li>0: second ニ first (clockwise, default)</li>
+<li>1: first ニ second (counter-clockwise)</li>
+<li>2: first ＝ second (equal length, for terminal bond by default)</li>
+<li>3: first × second (Cis-Trans Unknown)</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attr_dict</strong> (<em>dict</em>) – load <code class="docutils literal"><span class="pre">Bond</span></code> object from dict type notation.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.order">
+<code class="descname">order</code><a class="headerlink" href="#chorus.model.bond.Bond.order" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – bond order. <code class="docutils literal"><span class="pre">smilesparser</span></code> assigns order=9 to
+aromatic bonds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.is_lower_first">
+<code class="descname">is_lower_first</code><a class="headerlink" href="#chorus.model.bond.Bond.is_lower_first" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bool</em> – bond direction. If true, lower index atom is
+the first atom and the other is the second atom. <code class="docutils literal"><span class="pre">Bond.type</span></code>
+attribute uses this feature for stereochemistry determination.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.type">
+<code class="descname">type</code><a class="headerlink" href="#chorus.model.bond.Bond.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>bond type (see above)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.rotatable">
+<code class="descname">rotatable</code><a class="headerlink" href="#chorus.model.bond.Bond.rotatable" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bool</em> – rotatable or not</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.aromatic">
+<code class="descname">aromatic</code><a class="headerlink" href="#chorus.model.bond.Bond.aromatic" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bool</em> – aromatic or not</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.smiles_cis_trans">
+<code class="descname">smiles_cis_trans</code><a class="headerlink" href="#chorus.model.bond.Bond.smiles_cis_trans" title="Permalink to this definition">¶</a></dt>
+<dd><p>SMILES cis/trans flag</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.bond.Bond.visible">
+<code class="descname">visible</code><a class="headerlink" href="#chorus.model.bond.Bond.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bool</em> – whether it should be drawn or not.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -235,7 +325,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.7.1',
+            VERSION:'0.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

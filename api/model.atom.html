@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>chorus.model.atom &mdash; chorus 0.7.1 documentation</title>
+  <title>chorus.model.atom &mdash; chorus 0.7.2 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="chorus 0.7.1 documentation" href="../index.html"/>
+    <link rel="top" title="chorus 0.7.2 documentation" href="../index.html"/>
         <link rel="up" title="API references" href="api.html"/>
         <link rel="next" title="chorus.model.bond" href="model.bond.html"/>
         <link rel="prev" title="API references" href="api.html"/> 
@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="substructure.html">chorus.substructure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcsdr.html">chorus.mcsdr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rdkit.html">chorus.rdkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo.html">chorus.indigo</a></li>
 </ul>
 </li>
 </ul>
@@ -189,6 +190,188 @@
             
   <div class="section" id="module-chorus.model.atom">
 <span id="chorus-model-atom"></span><h1>chorus.model.atom<a class="headerlink" href="#module-chorus.model.atom" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="chorus.model.atom.Atom">
+<em class="property">class </em><code class="descname">Atom</code><span class="sig-paren">(</span><em>symbol</em>, <em>attr_dict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>symbol</strong> (<em>str</em>) – atom symbol</li>
+<li><strong>attr_dict</strong> (<em>dict</em>) – load <code class="docutils literal"><span class="pre">Atom</span></code> object from dict notation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.name">
+<code class="descname">name</code><a class="headerlink" href="#chorus.model.atom.Atom.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>general name of the atom</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.number">
+<code class="descname">number</code><a class="headerlink" href="#chorus.model.atom.Atom.number" title="Permalink to this definition">¶</a></dt>
+<dd><p>atomic number</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.symbol">
+<code class="descname">symbol</code><a class="headerlink" href="#chorus.model.atom.Atom.symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>atom symbol</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.charge">
+<code class="descname">charge</code><a class="headerlink" href="#chorus.model.atom.Atom.charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of electric charges</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.H_count">
+<code class="descname">H_count</code><a class="headerlink" href="#chorus.model.atom.Atom.H_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of hydrogens on the atom</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.multi">
+<code class="descname">multi</code><a class="headerlink" href="#chorus.model.atom.Atom.multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>multiplicity (1: non-radical, 2: radical, 3: biradical)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.mass">
+<code class="descname">mass</code><a class="headerlink" href="#chorus.model.atom.Atom.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>molar mass</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.visible">
+<code class="descname">visible</code><a class="headerlink" href="#chorus.model.atom.Atom.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>whether it should be drawn or not</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.coords">
+<code class="descname">coords</code><a class="headerlink" href="#chorus.model.atom.Atom.coords" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>tuple</em> – (x, y, z)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.color">
+<code class="descname">color</code><a class="headerlink" href="#chorus.model.atom.Atom.color" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>tuple</em> – (R, G, B) in the range of 0-255</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.pi">
+<code class="descname">pi</code><a class="headerlink" href="#chorus.model.atom.Atom.pi" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of pi electron</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.aromatic">
+<code class="descname">aromatic</code><a class="headerlink" href="#chorus.model.atom.Atom.aromatic" title="Permalink to this definition">¶</a></dt>
+<dd><p>aromatic</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.H_donor">
+<code class="descname">H_donor</code><a class="headerlink" href="#chorus.model.atom.Atom.H_donor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hydrogen bond donor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.H_acceptor">
+<code class="descname">H_acceptor</code><a class="headerlink" href="#chorus.model.atom.Atom.H_acceptor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hydrogen bond acceptor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.wctype">
+<code class="descname">wctype</code><a class="headerlink" href="#chorus.model.atom.Atom.wctype" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal"><span class="pre">wclogp`</span></code> descriptor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="chorus.model.atom.Atom.patty">
+<code class="descname">patty</code><a class="headerlink" href="#chorus.model.atom.Atom.patty" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal"><span class="pre">patty`</span></code> descriptor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.add_hydrogen">
+<code class="descname">add_hydrogen</code><span class="sig-paren">(</span><em>num</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.add_hydrogen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds hydrogens</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) – number of hydrogens</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.formula_html">
+<code class="descname">formula_html</code><span class="sig-paren">(</span><em>reversed_=False</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.formula_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chemical formula HTML</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reversed</strong> (<em>bool</em>) – reversed text for leftmost atom groups</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.composition">
+<code class="descname">composition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.composition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atom group composition</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">atom count by atom symbol</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">collections.Counter</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.mw">
+<code class="descname">mw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.mw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Molecular weight</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.charge_sign">
+<code class="descname">charge_sign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.charge_sign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Charge sign text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.charge_sign_html">
+<code class="descname">charge_sign_html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.charge_sign_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Charge sign HTML</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="chorus.model.atom.Atom.dumps">
+<code class="descname">dumps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chorus.model.atom.Atom.dumps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dumps Atom object to dict notation</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -235,7 +418,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.7.1',
+            VERSION:'0.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

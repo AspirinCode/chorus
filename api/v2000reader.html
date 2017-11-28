@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>chorus.v2000reader &mdash; chorus 0.7.1 documentation</title>
+  <title>chorus.v2000reader &mdash; chorus 0.7.2 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="chorus 0.7.1 documentation" href="../index.html"/>
+    <link rel="top" title="chorus 0.7.2 documentation" href="../index.html"/>
         <link rel="up" title="API references" href="api.html"/>
         <link rel="next" title="chorus.v2000writer" href="v2000writer.html"/>
         <link rel="prev" title="chorus.smilessupplier" href="smilessupplier.html"/> 
@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="substructure.html">chorus.substructure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcsdr.html">chorus.mcsdr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rdkit.html">chorus.rdkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo.html">chorus.indigo</a></li>
 </ul>
 </li>
 </ul>
@@ -189,6 +190,22 @@
             
   <div class="section" id="module-chorus.v2000reader">
 <span id="chorus-v2000reader"></span><h1>chorus.v2000reader<a class="headerlink" href="#module-chorus.v2000reader" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="chorus.v2000reader.inspect">
+<code class="descname">inspect</code><span class="sig-paren">(</span><em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.inspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inspect SDFile list of string</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(data label list, number of records)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="function">
 <dt id="chorus.v2000reader.inspect_file">
 <code class="descname">inspect_file</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#chorus.v2000reader.inspect_file" title="Permalink to this definition">¶</a></dt>
@@ -390,7 +407,7 @@ ValueError: if Unsupported symbol is found</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.7.1',
+            VERSION:'0.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
